@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5A2AEC8A-67A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chu.Bank.Api", "Chu.Bank.Api\Chu.Bank.Api.csproj", "{10AE7127-AB01-4BA6-B63F-2258998B4CE9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chu.Bank.UnitTests", "Chu.Bank.UnitTests\Chu.Bank.UnitTests.csproj", "{7F187CFC-17A3-48AC-AA3D-05C4D4CD49F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +21,17 @@ Global
 		{10AE7127-AB01-4BA6-B63F-2258998B4CE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10AE7127-AB01-4BA6-B63F-2258998B4CE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10AE7127-AB01-4BA6-B63F-2258998B4CE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F187CFC-17A3-48AC-AA3D-05C4D4CD49F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F187CFC-17A3-48AC-AA3D-05C4D4CD49F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F187CFC-17A3-48AC-AA3D-05C4D4CD49F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F187CFC-17A3-48AC-AA3D-05C4D4CD49F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{10AE7127-AB01-4BA6-B63F-2258998B4CE9} = {5A2AEC8A-67AB-4E27-A4FB-E7D5D3AD4329}
+		{7F187CFC-17A3-48AC-AA3D-05C4D4CD49F9} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5854CF45-E4F3-47B7-AD9D-74BED163C664}
