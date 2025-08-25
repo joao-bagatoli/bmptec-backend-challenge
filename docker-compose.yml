@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  chu-bank-api:
+    container_name: chu-bank-api
+    build:
+      context: /Chu.Bank.Api      
+      dockerfile: Dockerfile         
+    ports:
+      - "8080:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__ChuBankConnection=Server=chu-bank-db;Database=ChuBank;User Id=sa;Password=YourStrong!Passw0rd;TrustServerCertificate=True;Encrypt=False;
+    depends_on:
+      - chu-bank-db
+    networks:
+      - chu-bank-network
+
+  chu-bank-db:
+    container_name: chu-bank-db
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      SA_PASSWORD: "YourStrong!Passw0rd"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    networks:
+      - chu-bank-network
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P YourStrong!Passw0rd -Q 'SELECT 1'"]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+
+networks:
+  chu-bank-network:
+    driver: bridge
